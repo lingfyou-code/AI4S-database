@@ -1,14 +1,21 @@
 # AI4S 检索词与政策来源说明
 
-**版本：V3.2　文档日期：2026-10-14　数据库：Web of Science Core Collection**
+**版本：V3.1-R3（化工补词试检版）　文档日期：2026-10-15　数据库：Web of Science Core Collection**
 
 ## 1 修订范围与基线
 
-本轮在V3.1基础上，依据686条新增题录审查修订数学和化工领域表达，形成V3.2。操作基线仍是用户提供的`检索式.txt`；原有42个领域词保持原样。三块OR结构、TI/AK方法词、AB科研任务词、全部字段与PY=(2010-2026)、LA=(English)、DT=(Article)限制不变。本轮没有增加全局NOT、期刊或WC限制。
+当前启用**V3.1-R3（化工补词试检版）**，直接基线为用户已执行并报告11,582篇的V3.1-R2。本轮在第二逻辑块的TS领域组中恢复`"reactor design"`、`"transport phenomena"`、`"multiphase flow"`，补充`"membrane distillation"`、`"extractive distillation"`，共增加5项OR表达。
 
-V3.1曾新增数学22项、化工19项。V3.2改为明确词与邻近语境组合，按数学10组、化工12组说明，不能把组数当作与旧41项直接可比的词项数。V3.1完整存档式保留在第13节，便于同日对照。
+数学维持R2的12项，其中numerical analysis和inverse problem*已在R2恢复；原有其他领域42项、AI方法词、AB科研任务词、三个逻辑块、字段和全局限制均不改变。化工由11项增至16项，第二块领域表达合计70项。R3实际WoS命中数尚待用户执行，不使用11,582或本地匹配增量冒充R3实测。
 
-V2 Word附录与当前TXT基线并非相同字段版本：前者部分使用TI/AB/AK并集，当前基线使用TS；科研任务组也有差异。V3.2沿用实际TXT基线，不将两者混用。“相对V2新增686条”依据用户说明，尚未取得完整旧集合与同日历史独立复现差集。
+| 版本 | 数学 | 化工 | 原有其他领域 | 第二块领域合计 | 执行记录 |
+| --- | ---: | ---: | ---: | ---: | --- |
+| 原V3.1 | 22 | 19 | 42 | 83 | 历史截图报告11,654篇 |
+| V3.1-R1 | 10 | 11 | 42 | 63 | 用户报告11,443篇；收到211条减少记录 |
+| V3.1-R2 | 12 | 11 | 42 | 65 | 用户报告11,582篇；收到实际剩余72条 |
+| **V3.1-R3（当前）** | **12** | **16** | **42** | **70** | **待执行和反馈** |
+
+仓库此前发布的V3.2是采用对象与邻近条件的另一条修订方案，不是本轮R3的直接基线；其11,684条及本地回查数据保留为历史记录，不与R1/R2/R3合并计数。原文可查[历史search_terms.md](https://github.com/lingfyou-code/AI4S-database/blob/774a78c7e4bd146056072c244a6ec048b2bed763/search_terms.md)。
 
 ## 2 三个逻辑块与字段
 
@@ -32,11 +39,11 @@ V3拆分为主式、数学补充式和化工补充式的方案，在词表、字
 | B | 将官方上位概念或研究活动操作化为英文检索表达 | 说明转换关系，如传递现象到transport phenomena |
 | C | 代表性文献或领域惯用语补充 | 明确这是补词，不将其写成政策直接列出的词 |
 
-AI方法词来自方法学和论文用语；政策主要用于支持科研领域与任务范围。官方部署信息、学科资助范围、政策正文和政策解读不能相互冒充。P5、P6的年份早于V2优先选择的2024—2026年政策，系本轮为补足数学依据而明确新增的回溯来源；政策来源年份不改变文献检索的2010—2026年范围。
+AI方法词来自方法学和论文用语；政策主要用于支持科研领域与任务范围。官方部署信息、学科资助范围、政策正文和政策解读不能相互冒充。P5、P6的年份早于V2优先选择的2024—2026年政策，系V3.1为补足数学依据而新增的回溯来源，本轮沿用；政策来源年份不改变文献检索的2010—2026年范围。
 
 ## 4 政策与官方资助依据
 
-全部来源访问日期为2026-10-14。P7、P9无独立发布日期，按访问日期记录。
+P1—P10的来源信息沿用附件V3.1，原记录访问日期为2026-10-14；本轮于2026-10-15重新核对P7、P9的官方页面。P7、P9无独立发布日期，按访问日期记录。本轮不声称其他来源已重新逐一核验。
 
 | 编号 | 来源与链接 | 机构及时间 | 文件类型 | 用途 |
 | --- | --- | --- | --- | --- |
@@ -75,114 +82,72 @@ P8同时包括设备维护、安全预警等产业场景，这些内容不自动
 | 原有能源系统 | 3 | `"nuclear energy"`；`"energy system*"`；`"power grid"` |
 | 原有工程与先进制造 | 5 | `"advanced manufacturing"`；`semiconductor*`；`microelectronic*`；`"engineering design"`；`"complex engineering system*"` |
 
-## 6 数学领域修订词
+## 6 数学领域词（12项）
 
-以10组表达说明修订，不将“组数”等同于独立词项数。原学科名沿用P5—P7（数学）或P8—P10（化工）依据；本轮新增对象词及邻近规则为审查与文献补充C级，不声称这些检索规则由政策逐字列出。
+沿用R2的12项数学表达，不再调整；numerical analysis与inverse problem*为R2已恢复的两项。下表与第12节完整检索式逐项一致。词项仍可能服务其他科学工程对象，领域归属须依据研究内容判断。
 
-| 组 | 词簇 | 表达方式 | 审查依据与用途 |
-| --- | --- | --- | --- |
-| 1 | 明确数学学科 | 明确词/短语 | 保留明确学科名；去掉单独mathematics造成的数学教育误检。 |
-| 2 | 数学发现及精确对象 | 明确词/短语 | 依据331、601、630、662等保留数学发现、整数序列与代数关系；属于文献补充C级。 |
-| 3 | 符号与计算机数学 | 明确词/短语 | 保留计算机数学词，AI是否实际使用仍须核验。 |
-| 4 | 方程与动力系统 | 明确词/短语 | 保留方程、动力系统和离散微分算子等数学对象；研究贡献须人工核验。 |
-| 5 | 方程缩略语求解语境 | NEAR/10语境 | 仅在学习、求解或识别语境补入PDE/ODE，覆盖只写缩略语的科学计算研究。 |
-| 6 | 理论分支与数学成果 | NEAR/10语境 | 降低图论、拓扑、几何仅作为其他学科建模工具的混入。 |
-| 7 | 泛函分析数学语境 | NEAR/10语境 | 避免functional analysis被解释为生物功能分析。 |
-| 8 | 数值分析方法语境 | NEAR/10语境 | 避免仅写对工程对象做numerical analysis即进入数学扩展。 |
-| 9 | 反问题方法研究 | NEAR/10语境 | 降低一般逆向设计仅提反问题的混入，同时保留贝叶斯、方程及代理模型反演方法。 |
-| 10 | 统计推断方法研究 | NEAR/10语境 | 保留因果森林及聚类数据统计方法；教育应用数据不自动排除统计方法研究。 |
+| 序号 | 检索词 | 级别 | 依据 | 保留或调整理由 |
+| --- | --- | --- | --- | --- |
+| 1 | `mathematics` | A | P6 | 数学学科总称；亦可在短语中匹配applied mathematics、computational mathematics |
+| 2 | `"mathematical science*"` | B | P5 | 保留mathematical sciences这一常用名称变体，不假设系统必然将其等同于mathematics |
+| 3 | `"numerical analysis"` | B | P7；211条复核 | R2已恢复数值方法与科学计算覆盖，本轮保留 |
+| 4 | `"differential equation*"` | A | P7 | 保留方程研究主线；在686条审查中对应较多数学及科学计算候选 |
+| 5 | `"inverse problem*"` | B | P7；211条复核 | 恢复科学反问题与反演设计覆盖；命中不等于数学领域归属 |
+| 6 | `"dynamical system*"` | A | P7 | 保留动力系统研究对象 |
+| 7 | `"nonlinear dynamics"` | C | P7上位范围及既有题录 | 与dynamical system*并非字符串等价，保留已有相关记录支撑的表达 |
+| 8 | `"graph theory"` | A | P7 | 保留图论这一离散数学方向 |
+| 9 | `combinatorics` | A | P7 | 保留组合数学方向 |
+| 10 | `"number theory"` | A | P7 | 保留数论方向；不只依据686条增量样本决定是否保留整个方向 |
+| 11 | `"symbolic computation"` | C | P5上位范围及既有题录 | 保留符号计算研究路径 |
+| 12 | `"computer algebra"` | C | P5上位范围及既有题录 | 计算机代数与symbolic computation用语不完全相同，保留已有数学候选支撑的表达 |
 
-下面是第二逻辑块TS领域组内的数学模块，不能脱离完整检索式单独代替正式方案。
+## 7 化工领域词（16项）
 
-```text
-"mathematical science*" OR "pure mathematics" OR "applied mathematics" OR "computational mathematics" OR "numerical linear algebra" OR "number theory" OR "algebraic geometry" OR "mathematical statistics" OR "statistical theory"
-OR "mathematical discover*" OR "mathematical conjectur*" OR "mathematical theorem*" OR "mathematical proof*" OR "integer sequence*" OR "Diophantine equation*" OR "recurrence relation*" OR "Groebner basis" OR "Grobner basis"
-OR "symbolic computation" OR "computer algebra"
-OR "differential equation*" OR "dynamical system*" OR "nonlinear dynamics" OR "differential operator*"
-OR ((PDE* OR ODE*) NEAR/10 (solv* OR solution* OR solver* OR learn* OR discover* OR identif* OR "numerical method*" OR discretiz* OR discretis*))
-OR (("graph theory" OR combinatorics OR "algebraic topology" OR "differential geometry" OR "operator theory" OR "probability theory" OR "optimization theory") NEAR/10 (theorem* OR conjectur* OR proof* OR "mathematical problem*" OR "mathematical discover*" OR "mathematical theor*" OR bound*))
-OR (("functional analysis") NEAR/10 (Banach OR Hilbert OR Sobolev OR "function space*" OR "operator algebra*" OR "spectral theor*" OR "bounded operator*"))
-OR (("numerical analysis") NEAR/10 (convergence OR stability OR consisten* OR "error estimat*" OR "error analys*" OR "numerical method*" OR "numerical scheme*" OR discretiz* OR discretis* OR "approximation theor*"))
-OR (("inverse problem*") NEAR/10 (regulariz* OR regularis* OR "ill posed" OR illposed OR "inverse operator*" OR "numerical method*" OR "numerical analys*" OR identifiab* OR "inverse solver*" OR Bayesian OR "Gaussian process*" OR "reduced order" OR "surrogate model*" OR "automatic differentiation" OR PDE* OR ODE*))
-OR (("statistical infer*" OR "causal infer*" OR "causal forest*") NEAR/10 ("statistical method*" OR "statistical theor*" OR "simulation stud*" OR "asymptotic theor*" OR "treatment effect*" OR "causal effect*" OR "multivariate outcome*" OR cluster* OR multilevel OR propensity))
-```
+保留R2的11项，恢复3项、补充2项。新增表达分别服务反应器、传递、多相流及具体蒸馏对象；不同领域的词项数量不要求相同。政策提供上位范围，具体短语及本次恢复依据另列，不能写成政策逐字列出的英文检索词。
 
-## 7 化工领域修订词
+| 序号 | 检索词 | 级别 | 依据 | 保留或调整理由 |
+| --- | --- | --- | --- | --- |
+| 1 | `"chemical engineering"` | A | P9 | 化学工程学科总称，沿用R2 |
+| 2 | `"process systems engineering"` | C | L3 | 规范的过程系统工程名称，沿用R2 |
+| 3 | `"chemical process*"` | B | P8、P9 | 以chemical限定过程对象，沿用R2 |
+| 4 | `"reaction engineering"` | A | P9 | 反应工程主线，沿用R2 |
+| 5 | `"chemical reactor*"` | C | 反应工程领域惯用语 | 明确化学反应器对象，沿用R2 |
+| 6 | `"reactor design"` | C | L3；72条中的44、49号 | 本轮恢复反应器设计与放大覆盖；也可能覆盖核工程，内容领域另行判断 |
+| 7 | `"process intensification"` | A | P9 | 过程强化主线，沿用R2 |
+| 8 | `"transport phenomena"` | B | P9传递研究范围；72条中的38、46、50号 | 本轮恢复传热传质和跨尺度传递研究覆盖 |
+| 9 | `"multiphase flow"` | C | P9流动与传递上位范围；72条中的51、55、59号 | 本轮恢复多相流、CO2迁移及气固流规律发现覆盖 |
+| 10 | `"separation process*"` | C | 化工单元操作惯用语 | 分离过程上位对象，沿用R2 |
+| 11 | `"distillation column*"` | C | 既有题录及领域惯用语 | 蒸馏塔对象，沿用R2；与膜蒸馏、萃取蒸馏并列 |
+| 12 | `"membrane distillation"` | C | L5、L7；72条中的2、29、60号 | 本轮补充膜蒸馏，避免仅以蒸馏塔对象覆盖 |
+| 13 | `"extractive distillation"` | C | L6；72条中的6号 | 本轮补充萃取蒸馏及溶剂设计语境 |
+| 14 | `"membrane separation"` | C | 化工单元操作及既有题录 | 膜分离对象，沿用R2 |
+| 15 | `"flow chemistry"` | C | L4 | 自动化流动合成科研语境，沿用R2 |
+| 16 | `bioprocess*` | B | P9及既有题录 | 生物生产过程，沿用R2；不假定完全覆盖biochemical engineering |
 
-以12组表达说明修订，不将“组数”等同于独立词项数。原学科名沿用P5—P7（数学）或P8—P10（化工）依据；本轮新增对象词及邻近规则为审查与文献补充C级，不声称这些检索规则由政策逐字列出。
+## 8 相对所附V3.1仍移出的备用词
 
-| 组 | 词簇 | 表达方式 | 审查依据与用途 |
-| --- | --- | --- | --- |
-| 1 | 明确化工学科与过程 | 明确词/短语 | 保留明确学科、过程和装置词；bioprocess*在本子集24/27条判为化工，保留高效入口，生物功能和教学/监控仍需核验。 |
-| 2 | 反应与反应器对象 | 明确词/短语 | 用反应工程对象补充原reactor design，降低核反应器设计混入。 |
-| 3 | 反应动力学语境 | NEAR/5语境 | 覆盖实际动力学识别与反应参数研究。 |
-| 4 | 连续流反应语境 | NEAR/5语境 | 覆盖632等连续流光化学实验平台，不使用裸continuous flow。 |
-| 5 | 反应器语境 | NEAR/5语境 | 不再单独使用reactor design；用反应或停留时间等过程语境限定。 |
-| 6 | 化工蒸馏语境 | NEAR/5语境 | 去掉裸distillation，正向限定实际蒸馏单元，不全局NOT knowledge distillation。 |
-| 7 | 具体分离单元 | 明确词/短语 | 补充实际分离与混合单元，保留膜蒸馏、结晶、微混合器和溶剂设计文献。 |
-| 8 | 轻烃分离对象 | NEAR/5语境 | 补充以物质名称描述的轻烃分离，避免只认gas separation短语。 |
-| 9 | 分离过程物质语境 | NEAR/5语境 | 降低物理微结构phase separation等混入。 |
-| 10 | 石化过程语境 | NEAR/5语境 | 避免仅研究石化工人健康即计入化工。 |
-| 11 | 传递与多相流化工语境 | NEAR/10语境 | 将通用传递和多相流限定到化工单元或过程；该语境仍需内容核验。 |
-| 12 | 生物生产过程 | 明确词/短语 | 强化生物制造与发酵生产，避免一般生命活动bioprocesses。 |
+下表列出的表达不进入本版主式。移入备用表不表示其研究方向不属于AI4S，也不表示现有上位词已经完整覆盖它们；后续应根据减少记录的内容决定是否恢复。备用词不得在不更新版本号的情况下全部加回。
 
-下面是第二逻辑块TS领域组内的化工模块，不能脱离完整检索式单独代替正式方案。
-
-```text
-"chemical engineering" OR "process engineering" OR "process systems engineering" OR "chemical process*" OR "reaction engineering" OR "chemical reactor*" OR "process intensification" OR "membrane separation" OR "polymer processing" OR "flow chemistry" OR bioprocess* OR "biochemical engineering" OR "electrochemical engineering"
-OR "reaction kinetic*" OR "chemical kinetic*" OR "electrochemical reactor*" OR "photochemical reactor*" OR photoreactor* OR bioreactor* OR "oscillatory baffled reactor*" OR "continuous flow reactor*"
-OR ((kinetic*) NEAR/5 (reaction* OR catalytic OR enzymatic OR polymeriz* OR polymeris* OR pyrolysis OR saponif*))
-OR (("continuous flow" OR microfluidic*) NEAR/5 (reactor* OR reaction* OR chemical OR synthesis OR photochemical OR saponif*))
-OR ((reactor*) NEAR/5 (chemical OR catalytic OR electrochemical OR biochemical OR photochemical OR "reaction kinetic*" OR "residence time*" OR saponif*))
-OR ((distill*) NEAR/5 (column* OR tray* OR reboil* OR reflux OR azeotrop* OR extractive OR reactive OR vacuum OR "vapor liquid" OR "vapour liquid" OR membrane* OR desalination OR entrainer* OR fractionat* OR purif* OR feedstock* OR "heat pump*" OR solvent*))
-OR "solvent extract*" OR "liquid liquid extract*" OR "gas separation*" OR "electrostatic separation" OR "adsorption desalination" OR "crystallization process*" OR "crystallisation process*" OR "pressure swing adsorpt*" OR "temperature swing adsorpt*" OR pervaporat* OR "membrane distillation" OR micromixer*
-OR ((separat*) NEAR/5 (ethane OR ethylene OR propane OR propylene OR olefin*))
-OR (("separation process*") NEAR/5 (chemical OR gas OR liquid OR membrane* OR adsorpt* OR chromatograph* OR solvent* OR "mass transfer"))
-OR ((petrochemical*) NEAR/5 (process* OR reactor* OR refin* OR plant* OR cataly* OR separat* OR feedstock*))
-OR (("transport phenomena" OR "multiphase flow" OR "heat transfer" OR "mass transfer") NEAR/10 ("chemical process*" OR reactor* OR catalyst* OR distillation OR membrane* OR "heat exchang*" OR evaporator* OR crystalliz* OR crystallis* OR drying OR leach* OR "fluidized bed*"))
-OR "bioprocess engineer*" OR "bioprocess optim*" OR biomanufactur* OR fermentat* OR "cell cultivation" OR "microbial production" OR "biopharmaceutical process*" OR "cell therapy process*" OR "anaerobic digestion"
-```
-
-## 8 相对V3.1的针对性调整
-
-| 涉及表达 | V3.2处理 | 根据与取舍 |
+| 处理 | 涉及表达 | 理由与边界 |
 | --- | --- | --- |
-| 单独mathematics | 用明确学科名、数学发现与具体数学对象替代 | 减少数学教育数据和背景性提及；保留实际统计方法研究 |
-| inverse problem* | 与正则化、病态性、数值方法、贝叶斯反演、方程或代理模型等NEAR/10 | 减少光学、材料等研究只把逆问题当工具的混入；仍可能跨领域 |
-| numerical analysis | 与收敛、稳定性、误差、离散或数值方法等NEAR/10 | 避免任意工程数值分析自动归入数学 |
-| functional analysis | 与Banach、Hilbert、Sobolev、函数空间或算子等NEAR/10 | 避免生物功能分析同义误检 |
-| 图论、拓扑、几何等通用理论词 | 与定理、猜想、证明、数学问题或界等NEAR/10 | 保留理论方向，降低仅用作表示工具的混入；需检查未匹配论文 |
-| differential equation*、dynamical system*、nonlinear dynamics | 保留；补离散微分算子与有求解语境的PDE/ODE | 回查显示普遍加严会漏掉较多科学计算候选，采用较宽的对象入口 |
-| distillation | distill*与塔、塔盘、回流、再沸器、共沸、萃取、膜等NEAR/5 | 正向识别化工蒸馏；不全局NOT knowledge distillation |
-| reactor design | 用明确反应器对象及reactor*与化学、催化、电化学、动力学或停留时间NEAR/5替代 | 减少核反应器等混入；未给化工语境的真实反应器论文可能漏匹配 |
-| separation process* | 加物质和单元操作语境；补萃取、吸附、结晶、膜蒸馏和轻烃分离 | 减少其他学科的泛化分离描述，保留具体化工研究对象 |
-| petrochemical* | 与过程、精炼、反应器、催化、分离或原料NEAR/5 | 减少石化工人健康研究；仍须人工核验 |
-| transport phenomena、multiphase flow | 与反应器、膜、换热器、蒸发、结晶、干燥、浸出等NEAR/10 | 将传递过程连接到化工对象，部分通用流体/传热候选可能漏匹配 |
-| bioprocess* | 保留并补充发酵、生物制造和明确生产过程 | 原子集中27条命中记录有24条判为化工；一般生物活动、综述及监控内容继续人工核验 |
+| 数学名称去重 | `"applied mathematics"`；`"computational mathematics"` | 这两个短语本身包含mathematics；删除重复OR分支，不据此假设所有名称变体都被覆盖 |
+| 数学通用方法备用词 | `"numerical linear algebra"`；`"optimization theory"` | R2已恢复numerical analysis与inverse problem*，这两项不再列为移出词。其余备用词仍需根据相关候选损失评估 |
+| 数学细分方向移为备用 | `"algebraic geometry"`；`"algebraic topology"`；`"differential geometry"`；`"functional analysis"`；`"operator theory"`；`"probability theory"` | 将新增组收束到核心表达，避免单独展开完整细分目录。没有证据证明这些方向不重要或已完整覆盖 |
+| 化工通用表达备用 | `"process engineering"` | 仍待进一步评估；reactor design、transport phenomena、multiphase flow已在R3恢复，不再列为备用 |
+| 化工细分方向移为备用 | `"polymer processing"`；`petrochemical*`；`"biochemical engineering"`；`"electrochemical engineering"` | 减少加工/行业/交叉分支的并列展开；原有化学、材料或能源词不保证完整补回它们 |
+| 蒸馏按具体对象表达 | `distillation` → `"distillation column*"`、`"membrane distillation"`、`"extractive distillation"` | R3新增后两项；裸词仍未恢复。具体短语仍不能覆盖全部物理蒸馏或科研中的知识蒸馏候选，剩余减少记录继续保留核查 |
 
-## 9 回查结果、覆盖边界及验证方法
+不对全式加入`NOT "knowledge distillation"`。真实化工研究也可能使用知识蒸馏方法，直接全局排除会造成另一类漏检。
 
-对用户提供的686条V3.1新增子集，按TI、AB、DE、ID分别进行简化词项与邻近匹配：原新增领域组匹配686条，V3.2新增领域组匹配492条。先前初筛的326条目标领域候选中匹配294条（90.2%），另32条未匹配；其他科学工程领域134条、建议排除23条不再匹配。匹配记录中的目标领域候选占比从47.5%变为59.8%。这是同一已审子集的回查，不是新的WoS结果总量、全文确认后的精确率或总体查全率。
+## 9 已知覆盖边界及验证方法
 
-| 先前初筛类别 | V3.1子集条数 | V3.2领域组匹配 | 领域组未匹配 |
-| --- | ---: | ---: | ---: |
-| 数学及科学计算 | 184 | 167 | 17 |
-| 化工 | 134 | 121 | 13 |
-| 数学与化工交叉 | 8 | 6 | 2 |
-| 其他科学工程领域 | 283 | 149 | 134 |
-| 建议排除 | 54 | 31 | 23 |
-| 需全文核实 | 23 | 18 | 5 |
-| 合计 | 686 | 492 | 194 |
-
-本地匹配方法：TI、AB、DE、ID分别分词，不跨字段计算邻近；忽略大小写，标准化拉丁字母与标点；带*词采用词尾截断，多词短语按连续词序匹配；NEAR/x按两短语最近端点间的间隔词数近似判定。未复现WoS词形还原、全部词干扩展、索引分词及系统更新。本地旧领域组能重匹配全部686条，便于同口径比较，但不能据此宣称完全复现WoS。
-
-该子集已用于调整词表，因此回查不是独立验证集，可能存在对已见样本过度适配。新补充词可能引入这686条之外的文献，本地回查不能估计其规模或相关性。单人标题摘要初筛也不是最终纳入标准。
-
-领域词新增不等于任务覆盖完整。原AB任务词未增加theorem proving、conjecture generation、process optimization等表达，摘要仅写这些任务的论文仍可能漏检。新增数学对象词在TS侧不自动解决AB任务缺口。AI词中的foundation model、diffusion model、neural network仍有非AI词义；Article标记也不能排除所有实际综述。例行监控是否属于科学研究须看具体科研贡献。
-
-WoS官方帮助支持NEAR/x与括号组合；本式NEAR两侧仅用词项或OR，不在NEAR操作数内部嵌入AND。NEAR/5、NEAR/10是本轮审查后选择的检索参数，不是官方学科边界。官方资料：[Search Operators](https://webofscience.zendesk.com/hc/en-us/articles/20016122409105-Search-Operators)、[Search Rules](https://webofscience.zendesk.com/hc/en-us/articles/25350084904721-Search-Rules)，本轮访问于2026-10-14。引号、通配符和词形处理会影响实际匹配，应记录Exact Search状态。
-
-同日、同索引库和同一限制分别运行Q0（基线）、Q1（V3.1）、Q2（V3.2），记录实际集合编号。核查Q2 NOT Q1新引入文献、Q1 NOT Q2移出文献、Q2 NOT Q0净新增；Q0 NOT Q2在同快照与同限制下应为0，否则检查输入与配置。优先核验本轮32条目标候选未匹配记录，并抽查新引入集合；已收到用户说明对应V3.2的结果页截图：SCI-EXPANDED命中11,684条；实际执行全文与限制仍待核对，不能据此报告查准率。
+1. **本轮只新增5个化工组表达。** 相对R2，数学12项与其他42项原有领域词不变。原72条中五词并集本地匹配26条（P25/E0/U1）；其余46条为P31/E12/U3，继续保留核查。
+2. **执行结果分版记录。** R1为11,443篇，R2为11,582篇，均为用户报告；R3待执行。仓库历史V3.2的11,684篇属于另一方案，不作为R3结果。
+3. **同条件比较R3与R2。** 记录真实检索历史编号，分别运行R3 NOT R2和R2 NOT R3并导出UT、TI、AB、DE、ID。OR扩展在配置一致时应包含R2；异常时核对输入、快照与设置。
+4. **审查实际新增记录。** AI是否承担目标科研任务与研究领域分别编码；化工组词命中不等于化工内容归属。当前减少池参与补词，不能作为独立验证集。
+5. **任务词缺口仍存在。** 本轮不改变AB科研任务组，定理证明、猜想生成或部分化工优化任务仍可能覆盖不足。
+6. **本地匹配不能替代WoS。** 规范化短语匹配按TI/AB/DE/ID分别进行，不模拟全部词形和索引行为，不外推R3新增总量、总体查准率或查全率。
+7. **统计范围分别记录。** 686条历史增量池、211条R1减少池、72条R2减少池与各版全量候选量区分。2026年为部分年度；Early Access与卷期年需统一规则。
 
 ## 10 代表性文献与字段依据
 
@@ -192,253 +157,21 @@ WoS官方帮助支持NEAR/x与括号组合；本式NEAR两侧仅用词项或OR�
 | L2 | [Romera-Paredes, B., et al. (2024). Mathematical discoveries from program search with large language models. Nature, 625, 468–475.](https://doi.org/10.1038/s41586-023-06924-6) | 用于检验数学发现的研究边界；论文在线发表于2023年，卷期年为2024年。 |
 | L3 | [Schweidtmann, A. M., et al. (2021). Machine Learning in Chemical Engineering: A Perspective. Chemie Ingenieur Technik, 93(12), 2029–2039.](https://doi.org/10.1002/cite.202100083) | 核实PSE术语、反应器与蒸馏过程建模等用语；不将综述本身作为DT=Article一定能检出的哨兵论文。 |
 | L4 | [Coley, C. W., et al. (2019). A robotic platform for flow synthesis of organic compounds informed by AI planning. Science, 365, eaax1566.](https://doi.org/10.1126/science.aax1566) | 补充flow chemistry与机器人流动合成的科研语境。 |
+| L5 | [Machine learning and computational approaches for designing membrane distillation modules](https://doi.org/10.1016/j.seppur.2023.124627) | 来自用户72条中的2号；支持membrane distillation对象补词。 |
+| L6 | [Generative discovery of safer chemical alternatives using diffusion modeling: A case study in green solvent design for cyclohexane/benzene extractive distillation](https://doi.org/10.1016/j.jes.2024.08.014) | 来自用户72条中的6号；支持extractive distillation及绿色溶剂生成语境。 |
+| L7 | [Machine learning-driven multi-objective optimization of electrospun nanofibrous membranes design for membrane distillation](https://doi.org/10.1016/j.watres.2026.126093) | 来自用户72条中的60号；支持膜设计、实验验证及膜蒸馏对象。 |
+
+新增L5—L7的题名、DOI及对象依据来自用户提供的题录与摘要；本轮不声称重新取得其全文。政策与官方来源沿用既有记录和访问日期。
 
 **F1**：[Clarivate官方Web of Science Starter API客户端字段说明](https://github.com/clarivate/wosstarter_python_client/blob/master/README.md)。其TS条目明确列出Title、Abstract、Author keywords及Keywords Plus。原帮助页已转向新帮助中心，故保留当前可核实的官方说明链接。
 
-
-### 10.1 本轮审查记录依据（文献补充C级）
-
-以下取自用户导出的原始题录与摘要。编号对应既有686篇审查表；词项补充并非政策直接摘录。
-
-| 审查编号 | 原始题名 | 导出DOI | UT |
-| --- | --- | --- | --- |
-| 331 | Mathematical discoveries from program search with large language models | 10.1038/s41586-023-06924-6 | WOS:001157281900001 |
-| 601 | Discovery of Exact Equations for Integer Sequences | 10.3390/math12233745 | WOS:001376398100001 |
-| 630 | Discovery of Exact Equations via Computing the Gröbner Basis | 10.1007/s10994-026-07112-z | WOS:001826395500001 |
-| 662 | Discovering Infinite Recursive Conjectures Through Genetic Programming | 10.1109/TEVC.2025.3611312 | WOS:001784195800024 |
-| 20 | Machine learning-based predictive control using on-line model linearization: Application to an experimental electrochemical reactor | 10.1016/j.cherd.2023.08.017 | WOS:001068762600001 |
-| 55 | Computational fluid dynamic enabled design optimisation of miniaturised continuous oscillatory baffled reactors in chemical processing | 10.1080/10618562.2019.1683169 | WOS:000493234000001 |
-| 224 | Accelerating In Silico Discovery of Metal-Organic Frameworks for Ethane/Ethylene and Propane/Propylene Separation: A Synergistic Approach Integrating Molecular Simulation, Machine Learning, and Active Learning | 10.1021/acsami.3c14505 | WOS:001161280100001 |
-| 445 | Learning mesh-free discrete differential operators with self-supervised graph neural networks | 10.1016/j.cma.2026.119388 | WOS:001877842400001 |
-| 451 | Intelligent design of distillation columns integrating detailed tray geometry using data-driven model | 10.1016/j.cherd.2026.02.031 | WOS:001701342400001 |
-| 467 | Machine learning and genetic algorithm as tools for single and multi-objective shape optimization of micromixers with Cantor fractal structure | 10.1007/s43153-023-00414-y | WOS:001103079900002 |
-| 632 | Kinetic study in an automatic continuous-flow photochemical platform with machine learning | 10.1002/aic.18102 | WOS:000973620100001 |
-| 659 | Machine learning-driven multi-objective optimization of electrospun nanofibrous membranes design for membrane distillation | 10.1016/j.watres.2026.126093 | WOS:001769037400001 |
-| 666 | Integrated design of solvent-antisolvent mixtures and crystallization processes powered by machine learning | 10.1016/j.compchemeng.2025.109272 | WOS:001543678600001 |
-
 ## 11 方法部分可用表述
 
-本研究采用显式AI4S、方法—任务—领域共现、机理约束科学机器学习三条检索路径。在V3.1数学与化工扩展子集686条的标题摘要初筛基础上，仅修订第二逻辑块的领域表达，形成V3.2。修订对逆问题、数值分析、泛函分析和蒸馏等歧义表达增加语境条件，并补充数学发现、具体反应器及分离对象；保留微分方程、动力系统和生物过程等有效入口。原有领域42项、AI方法词、摘要任务词、字段及全局限制保持一致。子集本地回查匹配492条，其中294条属于先前初筛的目标领域候选；该回查用于诊断词表取舍，不作为独立查准率或总体查全率证据。随后收到用户说明为V3.2的结果页截图，SCI-EXPANDED界面命中11,684条；实际新增、移出及净新增集合仍需相同快照和设置下对照确定。
+本研究采用显式AI4S表述、AI方法与科研任务及科学领域的交叉约束、Scientific Machine Learning与方程或物理约束三条互补检索路径。科研领域依据官方政策、学科资助范围和代表性文献构建。在减少记录的标题摘要审查基础上，R2恢复数学表达numerical analysis与inverse problem*；本轮R3进一步恢复reactor design、transport phenomena和multiphase flow，并补充membrane distillation与extractive distillation。其他领域词、AI方法词、科研任务词、字段与全局限制不变。恢复或补充表达用于改善候选覆盖，不作为内容领域标签。R3实际命中数与同条件差集仍待执行和核验。
 
-## 12 V3.2完整可复制检索式
+## 12 完整可复制检索式
 
-在Web of Science Core Collection的高级检索/字段查询中复制以下完整代码块；用户随后提供了对应V3.2的结果页截图，显示SCI-EXPANDED命中11,684条；以下为本地存档完整式，实际执行全文仍待核对。
-
-```text
-(
-TS=(
-"AI for science"
-OR "artificial intelligence for science"
-OR "AI4S"
-OR "AI4Science"
-OR "AI for scientific discover*"
-OR "artificial intelligence for scientific discover*"
-OR "AI-driven scientific discover*"
-OR "AI-enabled scientific discover*"
-OR "AI-accelerated scientific discover*"
-OR "machine learning for science"
-OR "self-driving laborator*"
-OR "autonomous laborator*"
-OR "robotic laborator*"
-OR "closed-loop laborator*"
-)
-
-OR
-
-(
-(
-TI=(
-"artificial intelligence"
-OR "machine learning"
-OR "deep learning"
-OR "neural network*"
-OR "graph neural network*"
-OR GNN*
-OR "foundation model*"
-OR "generative model*"
-OR "large language model*"
-OR "Bayesian optimization"
-OR "active learning"
-OR "reinforcement learning"
-OR "diffusion model*"
-)
-
-OR
-
-AK=(
-"artificial intelligence"
-OR "machine learning"
-OR "deep learning"
-OR "neural network*"
-OR "graph neural network*"
-OR GNN*
-OR "foundation model*"
-OR "generative model*"
-OR "large language model*"
-OR "Bayesian optimization"
-OR "active learning"
-OR "reinforcement learning"
-OR "diffusion model*"
-)
-)
-
-AND
-
-AB=(
-"scientific discover*"
-OR "hypothesis generat*"
-OR "causal infer*"
-OR "equation discover*"
-OR "physical law discover*"
-OR "governing equation*"
-OR "mechanism discover*"
-OR "mechanism infer*"
-OR "symbolic regression"
-OR "structure-function*"
-OR "material* discover*"
-OR "drug discover*"
-OR "virtual screen*"
-OR "high-throughput screen*"
-OR "inverse design"
-OR "de novo design"
-OR "molecular design"
-OR "protein design"
-OR "catalyst design"
-OR "molecule generat*"
-OR "protein structure predict*"
-OR "molecular propert* predict*"
-OR "material* propert* predict*"
-OR "reaction predict*"
-OR retrosynthes*
-OR "experiment* design"
-OR "experiment* planning"
-OR "autonomous experiment*"
-OR "closed-loop experiment*"
-OR "self-driving laborator*"
-OR "robotic laborator*"
-OR "design space explor*"
-OR "design optim*"
-)
-
-AND
-
-TS=(
-"materials science"
-OR "materials informatics"
-OR "material* design"
-OR "material* discover*"
-OR "critical material*"
-
-OR "chemical science*"
-OR "chemical synthesis"
-OR catalys*
-OR "reaction predict*"
-OR retrosynthes*
-
-OR "quantum physics"
-OR "quantum information science"
-OR "nuclear physic*"
-OR "particle physics"
-OR "high energy physics"
-OR "fusion energy"
-OR "nuclear fusion"
-OR "nuclear fission"
-OR "plasma physics"
-
-OR astrophysic*
-OR astronom*
-OR "space science*"
-
-OR "earth science*"
-OR geoscience*
-OR "climate science*"
-
-OR biotechnology
-OR genomic*
-OR proteomic*
-OR "protein design"
-OR "protein structure"
-OR "drug discover*"
-OR "drug design"
-OR "biomedical science*"
-OR "medical science*"
-
-OR "nuclear energy"
-OR "energy system*"
-OR "power grid"
-
-OR "advanced manufacturing"
-OR semiconductor*
-OR microelectronic*
-OR "engineering design"
-OR "complex engineering system*"
-
-OR (
-"mathematical science*" OR "pure mathematics" OR "applied mathematics" OR "computational mathematics" OR "numerical linear algebra" OR "number theory" OR "algebraic geometry" OR "mathematical statistics" OR "statistical theory"
-OR "mathematical discover*" OR "mathematical conjectur*" OR "mathematical theorem*" OR "mathematical proof*" OR "integer sequence*" OR "Diophantine equation*" OR "recurrence relation*" OR "Groebner basis" OR "Grobner basis"
-OR "symbolic computation" OR "computer algebra"
-OR "differential equation*" OR "dynamical system*" OR "nonlinear dynamics" OR "differential operator*"
-OR ((PDE* OR ODE*) NEAR/10 (solv* OR solution* OR solver* OR learn* OR discover* OR identif* OR "numerical method*" OR discretiz* OR discretis*))
-OR (("graph theory" OR combinatorics OR "algebraic topology" OR "differential geometry" OR "operator theory" OR "probability theory" OR "optimization theory") NEAR/10 (theorem* OR conjectur* OR proof* OR "mathematical problem*" OR "mathematical discover*" OR "mathematical theor*" OR bound*))
-OR (("functional analysis") NEAR/10 (Banach OR Hilbert OR Sobolev OR "function space*" OR "operator algebra*" OR "spectral theor*" OR "bounded operator*"))
-OR (("numerical analysis") NEAR/10 (convergence OR stability OR consisten* OR "error estimat*" OR "error analys*" OR "numerical method*" OR "numerical scheme*" OR discretiz* OR discretis* OR "approximation theor*"))
-OR (("inverse problem*") NEAR/10 (regulariz* OR regularis* OR "ill posed" OR illposed OR "inverse operator*" OR "numerical method*" OR "numerical analys*" OR identifiab* OR "inverse solver*" OR Bayesian OR "Gaussian process*" OR "reduced order" OR "surrogate model*" OR "automatic differentiation" OR PDE* OR ODE*))
-OR (("statistical infer*" OR "causal infer*" OR "causal forest*") NEAR/10 ("statistical method*" OR "statistical theor*" OR "simulation stud*" OR "asymptotic theor*" OR "treatment effect*" OR "causal effect*" OR "multivariate outcome*" OR cluster* OR multilevel OR propensity))
-)
-
-OR (
-"chemical engineering" OR "process engineering" OR "process systems engineering" OR "chemical process*" OR "reaction engineering" OR "chemical reactor*" OR "process intensification" OR "membrane separation" OR "polymer processing" OR "flow chemistry" OR bioprocess* OR "biochemical engineering" OR "electrochemical engineering"
-OR "reaction kinetic*" OR "chemical kinetic*" OR "electrochemical reactor*" OR "photochemical reactor*" OR photoreactor* OR bioreactor* OR "oscillatory baffled reactor*" OR "continuous flow reactor*"
-OR ((kinetic*) NEAR/5 (reaction* OR catalytic OR enzymatic OR polymeriz* OR polymeris* OR pyrolysis OR saponif*))
-OR (("continuous flow" OR microfluidic*) NEAR/5 (reactor* OR reaction* OR chemical OR synthesis OR photochemical OR saponif*))
-OR ((reactor*) NEAR/5 (chemical OR catalytic OR electrochemical OR biochemical OR photochemical OR "reaction kinetic*" OR "residence time*" OR saponif*))
-OR ((distill*) NEAR/5 (column* OR tray* OR reboil* OR reflux OR azeotrop* OR extractive OR reactive OR vacuum OR "vapor liquid" OR "vapour liquid" OR membrane* OR desalination OR entrainer* OR fractionat* OR purif* OR feedstock* OR "heat pump*" OR solvent*))
-OR "solvent extract*" OR "liquid liquid extract*" OR "gas separation*" OR "electrostatic separation" OR "adsorption desalination" OR "crystallization process*" OR "crystallisation process*" OR "pressure swing adsorpt*" OR "temperature swing adsorpt*" OR pervaporat* OR "membrane distillation" OR micromixer*
-OR ((separat*) NEAR/5 (ethane OR ethylene OR propane OR propylene OR olefin*))
-OR (("separation process*") NEAR/5 (chemical OR gas OR liquid OR membrane* OR adsorpt* OR chromatograph* OR solvent* OR "mass transfer"))
-OR ((petrochemical*) NEAR/5 (process* OR reactor* OR refin* OR plant* OR cataly* OR separat* OR feedstock*))
-OR (("transport phenomena" OR "multiphase flow" OR "heat transfer" OR "mass transfer") NEAR/10 ("chemical process*" OR reactor* OR catalyst* OR distillation OR membrane* OR "heat exchang*" OR evaporator* OR crystalliz* OR crystallis* OR drying OR leach* OR "fluidized bed*"))
-OR "bioprocess engineer*" OR "bioprocess optim*" OR biomanufactur* OR fermentat* OR "cell cultivation" OR "microbial production" OR "biopharmaceutical process*" OR "cell therapy process*" OR "anaerobic digestion"
-)
-)
-)
-
-OR
-
-(
-TS=(
-"scientific machine learning"
-OR "physics-informed machine learning"
-OR "physics informed machine learning"
-OR "physics-informed neural network*"
-OR "physics informed neural network*"
-OR PINN*
-OR "neural operator*"
-)
-
-AND
-
-AB=(
-"partial differential equation*"
-OR PDE*
-OR "governing equation*"
-OR "physical law*"
-OR "conservation law*"
-OR "boundary condition*"
-)
-)
-)
-
-AND PY=(2010-2026)
-AND LA=(English)
-AND DT=(Article)
-
-```
-
-
-## 13 V3.1完整存档式（历史对照）
-
-V3.1截图总量与686条审查均对应此历史版本，不归入V3.2实际结果。
+下方为当前V3.1-R3完整式，与压缩包根目录AI4S_V3_1_R3_完整检索式.txt一致。整段复制到WoS Core Collection高级检索，执行后记录实际索引、筛选设置、日期与命中量。R3尚无实测总量。
 
 ```text
 (
@@ -591,10 +324,7 @@ OR "complex engineering system*"
 
 OR mathematics
 OR "mathematical science*"
-OR "applied mathematics"
-OR "computational mathematics"
 OR "numerical analysis"
-OR "numerical linear algebra"
 OR "differential equation*"
 OR "inverse problem*"
 OR "dynamical system*"
@@ -602,34 +332,25 @@ OR "nonlinear dynamics"
 OR "graph theory"
 OR combinatorics
 OR "number theory"
-OR "algebraic geometry"
-OR "algebraic topology"
-OR "differential geometry"
-OR "functional analysis"
-OR "operator theory"
-OR "probability theory"
-OR "optimization theory"
 OR "symbolic computation"
 OR "computer algebra"
+
 OR "chemical engineering"
-OR "process engineering"
 OR "process systems engineering"
 OR "chemical process*"
 OR "reaction engineering"
 OR "chemical reactor*"
 OR "reactor design"
 OR "process intensification"
-OR "separation process*"
-OR distillation
-OR "membrane separation"
-OR "polymer processing"
-OR petrochemical*
-OR "flow chemistry"
 OR "transport phenomena"
 OR "multiphase flow"
+OR "separation process*"
+OR "distillation column*"
+OR "membrane distillation"
+OR "extractive distillation"
+OR "membrane separation"
+OR "flow chemistry"
 OR bioprocess*
-OR "biochemical engineering"
-OR "electrochemical engineering"
 )
 )
 
@@ -662,5 +383,14 @@ OR "boundary condition*"
 AND PY=(2010-2026)
 AND LA=(English)
 AND DT=(Article)
-
 ```
+
+## 13 R1减少记录复核
+
+此前提供的211条R1减少记录均有唯一UT与DOI，并全部对应原686条。标题摘要复核处置为P183、E18、U10；不能把全部减少记录当作误检。R2首先恢复两个数学表达，用户报告11,582篇。211条复核报告与逐条材料作为历史证据保留在压缩包“复核211篇”。
+
+## 14 实际72条复核与本轮落实
+
+用户提供的实际72条，UT与此前从211条预测的剩余集合一致；对应TI/AB/DE/ID/PY/SO/DI/WC均相同，沿用标题摘要处置P56/E12/U4。三项恢复表达在此池匹配20条（P19/E0/U1），再补充两项蒸馏表达后五词并集26条（P25/E0/U1）。17、34号仅在Keywords Plus匹配具体蒸馏短语，不据此断言其内容主题为该蒸馏类型。
+
+本轮已将上述5项写入R3，数学和其他原有领域词不再调整。26条仅是此减少池的本地匹配；剩余46条含P31/E12/U3，不能自动删除。裸词distillation在原72条对应P20/E12/U1，需要结合科研内容判断；不增加全局NOT knowledge distillation。
