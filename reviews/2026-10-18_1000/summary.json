@@ -1,0 +1,42 @@
+{
+  "n": 1000,
+  "counts": {
+    "P": 913,
+    "E": 70,
+    "U": 17
+  },
+  "title_screened_n": 1000,
+  "selected_abstract_records_n": 309,
+  "full_abstract_extra_n": 31,
+  "P_per_N": 0.913,
+  "P_plus_U_per_N": 0.93,
+  "sampling_method": "未提供，无法确认随机抽样",
+  "inclusion_scope": "AI实质参与数学、自然科学及相关工程研究；原创研究口径；科学计算方法与理论研究可纳入",
+  "source_file_split": {
+    "savedrecs (4)(2).txt": {
+      "P": 435,
+      "E": 53,
+      "U": 12
+    },
+    "savedrecs (5)(1).txt": {
+      "P": 478,
+      "E": 17,
+      "U": 5
+    }
+  },
+  "suggest_exclusion_categories": {
+    "综述/展望/概述": 67,
+    "综述/观点/治理": 2,
+    "管理/供应链": 1
+  },
+  "source_files": [
+    {
+      "name": "savedrecs (4)(2).txt",
+      "sha256": "9a1483d07d57fc687cecc955cfbca2bea9adc8d8c6268b94391cb5695ae08d85"
+    },
+    {
+      "name": "savedrecs (5)(1).txt",
+      "sha256": "fc31390fb6ab4bf3587e9af705fa99562756118322a9ef5c264884cf44cc6320"
+    }
+  ]
+}

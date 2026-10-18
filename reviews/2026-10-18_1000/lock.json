@@ -1,0 +1,40 @@
+{
+  "version": "V3.1-R3",
+  "status": "locked",
+  "locked_on": "2026-10-18",
+  "timezone": "Asia/Shanghai",
+  "decision": "用户在1000条快速复核后明确要求锁定当前检索式",
+  "query_file": "query_locked.txt",
+  "query_sha256_utf8_lf": "04b5b4b827ebbaa3d12c9ea75ed6a6b835e8d99940f5c8935e3e3fcc55f31168",
+  "source_commit": "8ceb9fabae954080fd2385c70256b22c8e109887",
+  "source_query_document": "search_terms.md#12-完整可复制检索式",
+  "source_query_document_blob_sha": "ee91f9ed0ecb45a87a0bd0d156966d9576c18dc1",
+  "query_changed_in_this_lock": false,
+  "domain_expression_counts": {
+    "mathematics": 12,
+    "chemical_engineering": 16,
+    "other": 42,
+    "total": 70
+  },
+  "global_limits": "PY=(2010-2026) AND LA=(English) AND DT=(Article)",
+  "latest_candidate_count_user_reported": 11637,
+  "count_reported_on": "2026-10-18",
+  "previous_descriptive_statistics_snapshot": {
+    "date": "2026-10-15",
+    "n": 11608
+  },
+  "database_execution_timestamp_and_history_id": "尚未独立取得",
+  "full_export_unique_ut_n": null,
+  "final_included_n": null,
+  "audit": {
+    "n": 1000,
+    "P": 913,
+    "E": 70,
+    "U": 17,
+    "title_reviewed_n": 1000,
+    "selected_abstract_review_n": 309,
+    "sampling_method": "未知，不能确认随机抽样",
+    "precision_label": "题名主导快筛的初步相关候选比例91.3%，非全文确证查准率"
+  },
+  "future_changes": "后续检索更新或实质修改须另立版本、记录日期与差异；不覆盖本次锁定式。"
+}

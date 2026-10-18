@@ -1,0 +1,209 @@
+(
+TS=(
+"AI for science"
+OR "artificial intelligence for science"
+OR "AI4S"
+OR "AI4Science"
+OR "AI for scientific discover*"
+OR "artificial intelligence for scientific discover*"
+OR "AI-driven scientific discover*"
+OR "AI-enabled scientific discover*"
+OR "AI-accelerated scientific discover*"
+OR "machine learning for science"
+OR "self-driving laborator*"
+OR "autonomous laborator*"
+OR "robotic laborator*"
+OR "closed-loop laborator*"
+)
+
+OR
+
+(
+(
+TI=(
+"artificial intelligence"
+OR "machine learning"
+OR "deep learning"
+OR "neural network*"
+OR "graph neural network*"
+OR GNN*
+OR "foundation model*"
+OR "generative model*"
+OR "large language model*"
+OR "Bayesian optimization"
+OR "active learning"
+OR "reinforcement learning"
+OR "diffusion model*"
+)
+
+OR
+
+AK=(
+"artificial intelligence"
+OR "machine learning"
+OR "deep learning"
+OR "neural network*"
+OR "graph neural network*"
+OR GNN*
+OR "foundation model*"
+OR "generative model*"
+OR "large language model*"
+OR "Bayesian optimization"
+OR "active learning"
+OR "reinforcement learning"
+OR "diffusion model*"
+)
+)
+
+AND
+
+AB=(
+"scientific discover*"
+OR "hypothesis generat*"
+OR "causal infer*"
+OR "equation discover*"
+OR "physical law discover*"
+OR "governing equation*"
+OR "mechanism discover*"
+OR "mechanism infer*"
+OR "symbolic regression"
+OR "structure-function*"
+OR "material* discover*"
+OR "drug discover*"
+OR "virtual screen*"
+OR "high-throughput screen*"
+OR "inverse design"
+OR "de novo design"
+OR "molecular design"
+OR "protein design"
+OR "catalyst design"
+OR "molecule generat*"
+OR "protein structure predict*"
+OR "molecular propert* predict*"
+OR "material* propert* predict*"
+OR "reaction predict*"
+OR retrosynthes*
+OR "experiment* design"
+OR "experiment* planning"
+OR "autonomous experiment*"
+OR "closed-loop experiment*"
+OR "self-driving laborator*"
+OR "robotic laborator*"
+OR "design space explor*"
+OR "design optim*"
+)
+
+AND
+
+TS=(
+"materials science"
+OR "materials informatics"
+OR "material* design"
+OR "material* discover*"
+OR "critical material*"
+
+OR "chemical science*"
+OR "chemical synthesis"
+OR catalys*
+OR "reaction predict*"
+OR retrosynthes*
+
+OR "quantum physics"
+OR "quantum information science"
+OR "nuclear physic*"
+OR "particle physics"
+OR "high energy physics"
+OR "fusion energy"
+OR "nuclear fusion"
+OR "nuclear fission"
+OR "plasma physics"
+
+OR astrophysic*
+OR astronom*
+OR "space science*"
+
+OR "earth science*"
+OR geoscience*
+OR "climate science*"
+
+OR biotechnology
+OR genomic*
+OR proteomic*
+OR "protein design"
+OR "protein structure"
+OR "drug discover*"
+OR "drug design"
+OR "biomedical science*"
+OR "medical science*"
+
+OR "nuclear energy"
+OR "energy system*"
+OR "power grid"
+
+OR "advanced manufacturing"
+OR semiconductor*
+OR microelectronic*
+OR "engineering design"
+OR "complex engineering system*"
+
+OR mathematics
+OR "mathematical science*"
+OR "numerical analysis"
+OR "differential equation*"
+OR "inverse problem*"
+OR "dynamical system*"
+OR "nonlinear dynamics"
+OR "graph theory"
+OR combinatorics
+OR "number theory"
+OR "symbolic computation"
+OR "computer algebra"
+
+OR "chemical engineering"
+OR "process systems engineering"
+OR "chemical process*"
+OR "reaction engineering"
+OR "chemical reactor*"
+OR "reactor design"
+OR "process intensification"
+OR "transport phenomena"
+OR "multiphase flow"
+OR "separation process*"
+OR "distillation column*"
+OR "membrane distillation"
+OR "extractive distillation"
+OR "membrane separation"
+OR "flow chemistry"
+OR bioprocess*
+)
+)
+
+OR
+
+(
+TS=(
+"scientific machine learning"
+OR "physics-informed machine learning"
+OR "physics informed machine learning"
+OR "physics-informed neural network*"
+OR "physics informed neural network*"
+OR PINN*
+OR "neural operator*"
+)
+
+AND
+
+AB=(
+"partial differential equation*"
+OR PDE*
+OR "governing equation*"
+OR "physical law*"
+OR "conservation law*"
+OR "boundary condition*"
+)
+)
+)
+
+AND PY=(2010-2026)
+AND LA=(English)
+AND DT=(Article)
