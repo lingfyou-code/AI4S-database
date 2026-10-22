@@ -1,0 +1,50 @@
+{
+  "date": "2026-10-22",
+  "release": "https://github.com/lingfyou-code/AI4S-database/releases/tag/data-v3-20261022",
+  "all_six_packages_verified": true,
+  "verification": "GitHub Release服务器返回的文件大小与SHA256逐包对照原始校验清单，6包均一致；非重新下载全包校验。",
+  "packages": [
+    {
+      "original": "AI4S_51篇补证复核及合并_v3_20261022.zip",
+      "asset": "AI4S_51._v3_20261022.zip",
+      "url": "https://github.com/lingfyou-code/AI4S-database/releases/download/data-v3-20261022/AI4S_51._v3_20261022.zip",
+      "sha256": "56a3b87c3f4ca49777af1d642b604ac2c1ac767211bedab83eec99b9e7831b76",
+      "bytes": 72680480
+    },
+    {
+      "original": "AI4S_复核合并样本_v2_20261022.zip",
+      "asset": "AI4S_._v2_20261022.zip",
+      "url": "https://github.com/lingfyou-code/AI4S-database/releases/download/data-v3-20261022/AI4S_._v2_20261022.zip",
+      "sha256": "17a0f5937fb6ace6b35463a0a542bc38d1dedc39c7931ecabf1bd734f8bda79f",
+      "bytes": 73221201
+    },
+    {
+      "original": "AI4S_1412篇复核完成_20261022.zip",
+      "asset": "AI4S_1412._20261022.zip",
+      "url": "https://github.com/lingfyou-code/AI4S-database/releases/download/data-v3-20261022/AI4S_1412._20261022.zip",
+      "sha256": "6f00103d9946b4e642dab340544b4801d9a4833dd549a4eda823933ec8c54bd5",
+      "bytes": 4037635
+    },
+    {
+      "original": "AI4S_待核验文献复核_首批160篇.zip",
+      "asset": "AI4S_._.160.zip",
+      "url": "https://github.com/lingfyou-code/AI4S-database/releases/download/data-v3-20261022/AI4S_._.160.zip",
+      "sha256": "fdf31e5adebb9725a4e2c45029aae062a452617e374caf19fe4584007983c451",
+      "bytes": 1107258
+    },
+    {
+      "original": "AI4S_模型辅助筛选核心样本_v1_20261021.zip",
+      "asset": "AI4S_._v1_20261021.zip",
+      "url": "https://github.com/lingfyou-code/AI4S-database/releases/download/data-v3-20261022/AI4S_._v1_20261021.zip",
+      "sha256": "cea0581d06b514483022bf765d5778dd6fce7623065bd29ff72070f3c70e9d48",
+      "bytes": 71685880
+    },
+    {
+      "original": "AI4S_领域筛除与候选样本_20261021.zip",
+      "asset": "AI4S_._20261021.zip",
+      "url": "https://github.com/lingfyou-code/AI4S-database/releases/download/data-v3-20261022/AI4S_._20261021.zip",
+      "sha256": "d742bc60adaef77bc30bffaadf5f730787b7ab774beee5046a1e90315b98d6b2",
+      "bytes": 37013222
+    }
+  ]
+}

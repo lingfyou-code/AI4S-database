@@ -487,7 +487,7 @@ Journal of Chemical Information and Modeling以316篇（2.72%）居首，其次�
 
 1412篇在最新口径下为：纳入1223、排除148、拓展21、待补证20。51篇补证复核中，31篇形成归类结论（24纳入、6排除、1拓展），20篇仍缺关键证据。逐篇证据、来源与缺口见[最新复核台账](reviews/2026-10-22_v3/12_全部51篇补证复核台账.csv)和[20篇待补证清单](reviews/2026-10-22_v3/16_仍待补证_20篇.csv)。
 
-**[下载最新版v3完整数据包](https://github.com/lingfyou-code/AI4S-database/releases/download/data-v3-20261022/AI4S_51篇补证复核及合并_v3_20261022.zip)** · [全部版本与附件下载](data/packages/README.md) · [完整使用说明](reviews/2026-10-22_v3/00_使用与复核说明.md)
+**[下载最新版v3完整数据包](https://github.com/lingfyou-code/AI4S-database/releases/download/data-v3-20261022/AI4S_51._v3_20261022.zip)** · [全部版本与附件下载](data/packages/README.md) · [完整使用说明](reviews/2026-10-22_v3/00_使用与复核说明.md)
 
 v3数据包包含10189条全量审计、9470篇核心CSV、各类处置清单、逐篇复核记录、两套WoS TXT、验证结果与复现代码。两套TXT各19个文件、9470条，分析归年版与来源PY版只能择一导入。分类以`v3最终分类`为准，历史模型与v2列保留用于追溯。
 
