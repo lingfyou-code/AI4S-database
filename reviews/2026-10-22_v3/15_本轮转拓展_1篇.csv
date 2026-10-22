@@ -1,0 +1,2 @@
+﻿原当前序号,WoS编号,DOI,题名,上轮待补证问题,本轮复核结论,本轮复核理由,核验来源,证据位置,证据层级,仍缺证据,核验日期
+9638,WOS:001375564400009,10.1038/s41467-024-54696-y,Automated discovery of experimental designs in super-resolution microscopy with XLuminA,完整摘要列JAX自动微分与优化但无具体学习模型，需确认AI搜索机制而非仅数值优化。,转为拓展参考,出版社正文明确展示的是光学模拟器与梯度优化闭环；深度学习代理仅为可选用途。按本项目不将自动微分或常规优化本身视为AI模型的口径，保留作自动科研设计参考，不计核心。,https://www.nature.com/articles/s41467-024-54696-y | https://openreview.net/pdf?id=ik9YuAHq6J,Overview及优化方法；公开版本自动发现工具段,出版社方法检索片段及作者公开会议稿,,2026-10-22
